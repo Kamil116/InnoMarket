@@ -1,0 +1,96 @@
+#middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 68vh;
+}
+
+#login-window, #registration-window {
+    overflow: hidden;
+    width: 20rem;
+    box-shadow: lightgray 1px 2px 2px 3px;
+}
+
+
+.main-content {
+    padding: 15px 20px 30px;
+}
+
+.main-content input {
+    height: 1.6rem;
+    width: 100%;
+    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.sign-buttons {
+    display: flex;
+}
+
+.main-content label {
+    font-size: 14px;
+}
+
+#sign-in-button-login, #sign-up-button-login,
+#sign-in-button-registration, #sign-up-button-registration, #sign-in-button-registration {
+    font-size: 17px;
+    padding: 10px 0 10px 0;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+#sign-in-button-login, #sign-up-button-registration {
+    border-bottom: 3px solid #FA8232;
+    font-weight: bold;
+}
+
+#sign-up-button-login, #sign-in-button-registration {
+    border-bottom: 3px solid lightgray;
+    opacity: 0.6;
+}
+
+.sign-in-up, .sign-up-up {
+    flex-basis: 50%;
+}
+
+.input_box {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border: 1px solid lightgray;
+    padding-left: 5px;
+}
+
+#password-input-registration {
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#bottom_sign_in, #bottom_sign_up, #bottom_sign_up_vendor {
+    border: none;
+    color: white;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    background-color: #00A486;
+    cursor: pointer;
+}
+
+#bottom_sign_up_vendor {
+    margin-top: 20px;
+    background-color: #0094AB;
+}
+
+#bottom_sign_in:hover, #bottom_sign_up:hover, #bottom_sign_up_vendor:hover {
+    opacity: 0.8;
+}
+
+#middle {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.wide_button {
+    width: 100%;
+}
