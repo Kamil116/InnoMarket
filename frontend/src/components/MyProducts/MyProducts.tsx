@@ -6,9 +6,11 @@ import getProducts from "../../features/getProducts";
 import Product from "../Product/Product";
 
 type Product = {
-    product_name: string;
-    price: number;
-    description: string;
+    product_id: string,
+    product_name: string,
+    price: number,
+    description: string,
+    customerEmail: string,
 };
 
 export default function MyProducts() {
@@ -29,7 +31,7 @@ export default function MyProducts() {
     return (
         <Layout>
             <div id='main-window-my-products'>
-                <ManagingPanel />
+                <ManagingPanel/>
                 <div id='my-products-content'>
                     {products.map((product) => (
                         <Product product={product} key={count++}/>

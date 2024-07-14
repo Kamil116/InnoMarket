@@ -2,11 +2,14 @@ import Layout from "../Layout/Layout";
 import React, {FormEvent} from "react";
 import "./AddProduct.css";
 import ManagingPanel from "./ManagingPanel";
-import app from "../../firebaseConfig";
-import {getDatabase, ref, set, push} from "firebase/database";
+import {app, storage} from "../../firebaseConfig";
+import {getDatabase, ref, set} from "firebase/database";
+import {uploadBytes, ref as storageRef} from 'firebase/storage'
+import {Guid} from 'guid-typescript';
 
 
 export default function AddProduct() {
+
     async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
         event.preventDefault();
 
@@ -15,7 +18,6 @@ export default function AddProduct() {
         const product_name: string = (form[0] as HTMLInputElement).value;
         const price: number = Number((form[1] as HTMLInputElement).value);
         const main_image: File = (form[2] as HTMLInputElement).files![0];
-        console.log(main_image);
         const additional_images: FileList | null = (form[3] as HTMLInputElement).files;
         const description: string = (form[4] as HTMLInputElement).value;
 
@@ -26,28 +28,32 @@ export default function AddProduct() {
             validEmail = validEmail.replace('.', ',')
         }
 
+        const guid = Guid.create().toString();
+        console.log(guid)
+
         const db = getDatabase(app);
-        const userProductsRef = ref(db, `products/users/${validEmail}/${product_name}`);
+        const userProductsRef = ref(db, `users/${validEmail}/${guid}`);
 
         set(userProductsRef, {
+            product_id: guid,
             product_name: product_name,
             price: price,
-            main_image: main_image,
             description: description,
-        })
-            .then(() => alert('Data saved'))
-            .catch((error) => alert(error));
+        }).catch((error) => alert(error));
 
-        const allProducts = ref(db, `products/all/`);
-        push(allProducts, {
+        const allProducts = ref(db, `products/${guid}`);
+        set(allProducts, {
+            product_id: guid,
             product_name: product_name,
             price: price,
-            main_image: main_image,
             description: description,
             customerEmail: userEmail,
+        }).catch((error) => alert(error));
+
+        const imageRef = storageRef(storage, `images/${guid}`)
+        uploadBytes(imageRef, main_image).then(() => {
+            alert('image uploaded')
         })
-            .then(() => alert('Data saved'))
-            .catch((error) => alert(error));
     }
 
     return (

@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 export default function ManagingPanel() {
     const navigate = useNavigate();
 
-    function handleClick() {
+    function handleLogoutButton() {
         localStorage.setItem('isLogged', 'no')
         navigate('/');
     }
@@ -28,7 +28,7 @@ export default function ManagingPanel() {
                         </li>
                         <hr className="hr"/>
                         <li>
-                            <button className='logout-button' onClick={handleClick}>Logout</button>
+                            <button className='logout-button' onClick={handleLogoutButton}>Logout</button>
                         </li>
                     </ul>
                 </nav>
