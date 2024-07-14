@@ -4,12 +4,14 @@
 }
 
 .footer {
+    font-size: 1.1rem;
+    font-family: Alef, sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     /* align-items: ; */
-    height: 20rem;
-    background: linear-gradient(90deg, #40BA21 0%, #00B158 50%);
+    height: 20vh;
+    background: linear-gradient(90deg, #40ba21 0%, #00b158 50%);
     color: #fff;
     padding-left: 18em;
     padding-right: 18em;
@@ -36,7 +38,7 @@
     line-height: 48px;
     border-radius: 50%;
     font-size: 2rem;
-    color: #40BA21;
+    color: #40ba21;
     font-weight: 700;
     text-align: center;
     background: #fff;
@@ -62,7 +64,6 @@
 /*    width: 50px;*/
 /*    text-align: end;*/
 /*}*/
-
 
 #footer p,
 .header p {

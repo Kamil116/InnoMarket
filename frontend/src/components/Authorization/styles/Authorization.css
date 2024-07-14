@@ -2,15 +2,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 68vh;
+    height: 76vh;
+    font-size: 1.1rem;
+    font-family: Alef, sans-serif;
 }
 
-#login-window, #registration-window {
+#login-window,
+#registration-window {
     overflow: hidden;
     width: 20rem;
     box-shadow: lightgray 1px 2px 2px 3px;
 }
-
 
 .main-content {
     padding: 15px 20px 30px;
@@ -28,29 +30,35 @@
 }
 
 .main-content label {
-    font-size: 14px;
+    font-size: 1.2rem;
 }
 
-#sign-in-button-login, #sign-up-button-login,
-#sign-in-button-registration, #sign-up-button-registration, #sign-in-button-registration {
-    font-size: 17px;
+#sign-in-button-login,
+#sign-up-button-login,
+#sign-in-button-registration,
+#sign-up-button-registration,
+#sign-in-button-registration {
+    font-size: 1.2rem;
     padding: 10px 0 10px 0;
     border: none;
     background-color: white;
     cursor: pointer;
 }
 
-#sign-in-button-login, #sign-up-button-registration {
-    border-bottom: 3px solid #FA8232;
+#sign-in-button-login,
+#sign-up-button-registration {
+    border-bottom: 3px solid #fa8232;
     font-weight: bold;
 }
 
-#sign-up-button-login, #sign-in-button-registration {
+#sign-up-button-login,
+#sign-in-button-registration {
     border-bottom: 3px solid lightgray;
     opacity: 0.6;
 }
 
-.sign-in-up, .sign-up-up {
+.sign-in-up,
+.sign-up-up {
     flex-basis: 50%;
 }
 
@@ -68,21 +76,20 @@
     padding-bottom: 5px;
 }
 
-#bottom_sign_in, #bottom_sign_up, #bottom_sign_up_vendor {
+#bottom_sign_in,
+#bottom_sign_up {
     border: none;
     color: white;
     padding-bottom: 5px;
     padding-top: 5px;
-    background-color: #00A486;
+    background-color: #00a486;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
-#bottom_sign_up_vendor {
-    margin-top: 20px;
-    background-color: #0094AB;
-}
-
-#bottom_sign_in:hover, #bottom_sign_up:hover, #bottom_sign_up_vendor:hover {
+#bottom_sign_in:hover,
+#bottom_sign_up:hover,
+#bottom_sign_up_vendor:hover {
     opacity: 0.8;
 }
 

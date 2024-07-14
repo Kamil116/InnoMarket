@@ -1,0 +1,15 @@
+#main-window-my-products {
+    display: flex;
+    height: 76vh;
+}
+
+#my-products-content {
+    border: 2px solid black;
+    margin-left: 5rem;
+    /*margin: 5rem 5rem;*/
+    height: 80%;
+    width: 50%;
+    margin-right: 5rem;
+    margin-top: 20px;
+    display: flex;
+}
