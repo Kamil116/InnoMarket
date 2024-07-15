@@ -1,0 +1,125 @@
+/* styles.css */
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    font-family: 'Public sans'
+}
+
+.heading p {
+    font-size: 24px;
+    margin: 0;
+    font-family: Public sans;
+}
+
+.explore button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.electronics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.product-list {
+    display: grid;
+    gap: 20px;
+}
+
+.row {
+    grid-template-columns: repeat(1, 2fr);
+    justify-content: center;
+    align-items: center;
+}
+
+.product {
+    position: relative; /* Для позиционирования кнопки сердечка */
+    flex: 0 0 calc(25% - 20px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    border: 1px solid #E4E7E9;
+    overflow: hidden;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 234px;
+    height: 320px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease-in-out; /* Плавный переход для фона */
+}
+
+.product:hover img {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1em;
+    color: #333;
+    margin: 0;
+}
+
+.heart-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 2px solid #E4E7E9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Плавный переход для появления кнопки */
+    z-index: 2;
+}
+
+.product:hover .heart-button {
+    opacity: 1;
+}
+
+.heart-button img {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
