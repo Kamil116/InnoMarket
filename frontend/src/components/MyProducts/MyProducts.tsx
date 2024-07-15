@@ -4,6 +4,8 @@ import ManagingPanel from "../ManagingProducts/ManagingPanel";
 import './MyProducts.css'
 import getProducts from "../../features/getProducts";
 import Product from "../Product/Product";
+import deleteProduct from "../../features/deleteProduct";
+import updateProduct from "../../features/updateProduct";
 
 type Product = {
     product_id: string,
@@ -28,13 +30,42 @@ export default function MyProducts() {
     }, []);
 
 
+    async function handleDelete(id: string) {
+        await deleteProduct(id, userEmail);
+
+        let newArray: Product[] = [];
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].product_id !== id) {
+                newArray.push(products[i]);
+            }
+        }
+
+        setProducts(newArray)
+    }
+
+    async function handleUpdate(updatedProduct: Product) {
+        await updateProduct(userEmail, updatedProduct);
+
+        let newArray: Product[] = [];
+        for (let i = 0; i < products.length; i++) {
+            if (products[i].product_id === updatedProduct.product_id) {
+                newArray.push(updatedProduct);
+            } else {
+                newArray.push(products[i]);
+            }
+        }
+
+        setProducts(newArray)
+    }
+
     return (
         <Layout>
             <div id='main-window-my-products'>
                 <ManagingPanel/>
                 <div id='my-products-content'>
                     {products.map((product) => (
-                        <Product product={product} key={count++}/>
+                        <Product product={product} key={count++} deleteProduct={handleDelete}
+                                 updateProduct={handleUpdate}/>
                     ))}
                 </div>
             </div>
