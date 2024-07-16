@@ -6,8 +6,9 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-
+.search-sort {
+    justify-content: center;
+}
 .heading {
     display: flex;
     justify-content: space-between;
@@ -15,6 +16,35 @@ body {
     padding: 20px;
     width: 100%;
     font-family: 'Public sans'
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.sort-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+input[type="search"] {
+    padding: 5px;
+    font-size: 16px;
+}
+button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+select {
+    padding: 5px;
+    font-size: 16px;
 }
 
 .heading p {
@@ -54,6 +84,10 @@ body {
     align-items: center;
 }
 
+.label:sort {
+    color: black;
+}
+
 .product {
     position: relative; /* Для позиционирования кнопки сердечка */
     flex: 0 0 calc(25% - 20px);
@@ -69,6 +103,33 @@ body {
     width: 234px;
     height: 320px;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    list-style-type: none;
+}
+.pagination li {
+    margin: 0 5px;
+}
+.pagination a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #007bff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+.pagination a:hover {
+    background-color: #f0f0f0;
+}
+.pagination .active a {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
 }
 
 .product:hover {

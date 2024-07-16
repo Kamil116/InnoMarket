@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Header and Footer Components</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <div class="header">
+        <a href="/">
+            <div class="logo">
+                <div class="logo_circle">IM</div>
+                <p>InnoMarket</p>
+            </div>
+        </a>
+        <form action="https://www.google.com/search" method="get" class="searchbar">
+            <input type="text" placeholder="Search items..."/>
+            <button>
+                <img src="public/search.svg" alt="search"/>
+            </button>
+        </form>
+        <div class="user_action">
+            <a href="https://www.vk.com">
+                <img src="public/heart.png" alt="wishlist" class="wishlist"/>
+            </a>
+            <div id="user-action-content">
+                <!-- This part should be dynamically rendered based on the login state -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="products">
+        <div class="electronics">
+            <div class="product-list">
+                <div class="search-sort">
+                    <form action="/search" method="get">
+                        <div class="search-container">
+                            <input type="search" id="search" name="q" placeholder="Search for anything...">
+                            <button type="submit">Search</button>
+                        </div>
+                        <div class="sort-container">
+                            <label for="sort">Sort by:</label>
+                            <select id="sort" name="sort">
+                                <option value="relevance">Relevance</option>
+                                <option value="date">Date</option>
+                                <option value="popularity">Popularity</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="product">
+                        <img / src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product">
+                        <img / src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product">
+                        <img / src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img/ src="prod.png">
+                        <div class="product-description">
+                            <div class="price"></div>
+                        </div>
+                        <div class="heart-button">
+                            <img src="heart.png" alt="Heart Icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="pagination">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
+
+    <!-- Footer Component -->
+    <div class="footer">
+        <div class="footer_top">
+            <div class="footer-links">
+                <a href="/">
+                    <p>Home</p>
+                </a>
+                <a href="/products">
+                    <p>All products</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer_bot">
+            <div class="logo_footer">
+                <div class="logo_circle_footer">IM</div>
+                <p>InnoMarket</p>
+            </div>
+            <p>2024 frontend project</p>
+        </div>
+    </div>
+</body>
+</html>
