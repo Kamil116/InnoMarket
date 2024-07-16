@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="Products.css">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Header and Footer Components</title>
+</head>
+<body>
+    <!-- Header Component -->
+    <div class="header">
+        <a href="/">
+            <div class="logo">
+                <div class="logo_circle">IM</div>
+                <p>InnoMarket</p>
+            </div>
+        </a>
+        <form action="https://www.google.com/search" method="get" class="searchbar">
+            <input type="text" placeholder="Search items..."/>
+            <button>
+                <img src="public/search.svg" alt="search"/>
+            </button>
+        </form>
+        <div class="user_action">
+            <a href="https://www.vk.com">
+                <img src="public/heart.png" alt="wishlist" class="wishlist"/>
+            </a>
+            <div id="user-action-content">
+                <!-- This part should be dynamically rendered based on the login state -->
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumb-header">
+        <div class="breadcrumb">
+            Home > Product
+        </div>
+    </div>
+
+    <div class="product-container">
+        <div class="product-preview">
+            <img id="main-image" src="https://via.placeholder.com/400x400" alt="Product Image"/>
+            <div class="images">
+                <img src="https://via.placeholder.com/60x60" alt="Thumbnail 1" class="active" onclick="changeImage(this.src)">
+                <img src="https://via.placeholder.com/60x60" alt="Thumbnail 2" onclick="changeImage(this.src)">
+                <img src="https://via.placeholder.com/60x60" alt="Thumbnail 3" onclick="changeImage(this.src)">
+            </div>
+        </div>
+        <div class="product-detail">
+            <div class="price">$99.99</div>
+            <div class="name">Product Name</div>
+            <div class="contacts">
+                <button onclick="location.href='https://t.me/username'">Contact on Telegram</button>
+            </div>
+            <div class="address">1234 Street Name, City, Country</div>
+            <div class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce in lorem ac justo efficitur consectetur. 
+            </div>
+            <div class="wish-share">
+                <div class="wishlist">
+                    <button>Add to Wishlist</button>
+                </div>
+                <div class="share">
+                    <button>Share</button>
+                </div>
+            </div>
+        </div>
+    </div>        
+
+    <!-- Footer Component -->
+    <div class="footer">
+        <div class="footer_top">
+            <div class="footer-links">
+                <a href="/">
+                    <p>Home</p>
+                </a>
+                <a href="/products">
+                    <p>All products</p>
+                </a>
+            </div>
+        </div>
+        <div class="footer_bot">
+            <div class="logo_footer">
+                <div class="logo_circle_footer">IM</div>
+                <p>InnoMarket</p>
+            </div>
+            <p>2024 frontend project</p>
+        </div>
+    </div>
+</body>
+</html>
