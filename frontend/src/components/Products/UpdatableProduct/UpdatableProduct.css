@@ -12,7 +12,7 @@
     height: 200px;
 }
 
-.delete-button, .edit-button {
+.delete-button, .edit-button, .update-button {
     background: linear-gradient(45deg, #b00000, #dc143c, #f13a13, #ff6666);
     border: none;
     border-radius: 50px;
@@ -26,18 +26,21 @@
     transition: all 0.2s ease-in-out;
 }
 
-.delete-button:hover, .edit-button:hover {
+.delete-button:hover, .edit-button:hover, .update-button:hover {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
 }
 
-.delete-button:active, .edit-button:active {
+.delete-button:active, .edit-button:active, .update-button:active {
     transform: translateY(-5px);
 }
 
 .edit-button {
-    color: #f0f8ff;
     background: linear-gradient(60deg, #ff8000, #ff7518, #fa8900, #ff9933);
+}
+
+.update-button {
+    background: linear-gradient(45deg, #32a852, #28a745, #20c997, #17a2b8);
 }
 
 input[type="text"],
@@ -45,4 +48,12 @@ input[type="number"] {
     width: 80%;
     margin: 5px 0;
     padding: 5px;
+}
+
+.update-input {
+    width: 200px;
+    height: 1.5rem;
+    border: 2px solid #e6e6fa;
+    border-radius: 7px;
+    font-size: 1.1rem;
 }

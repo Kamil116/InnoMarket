@@ -1,6 +1,6 @@
 import React, {FormEvent, useEffect, useState} from "react";
-import './Product.css'
-import getImage from "../../features/getImage";
+import './UpdatableProduct.css'
+import getImage from "../../../features/getImage";
 
 type Product = {
     product_id: string,
@@ -10,7 +10,7 @@ type Product = {
     customerEmail: string,
 };
 
-export default function Product(props: { product: Product, deleteProduct: Function, updateProduct: Function }) {
+export default function updatableProduct(props: { product: Product, deleteProduct: Function, updateProduct: Function }) {
     let item: Product = props.product;
     const [imageUrl, setImageUrl] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(true);
@@ -70,14 +70,14 @@ export default function Product(props: { product: Product, deleteProduct: Functi
                 <>
                     <form onSubmit={handleUpdate}>
                         <input
+                            className='update-input'
                             type="text"
                             defaultValue={item.product_name}
-                            // onChange={(e) => setEditName(e.target.value)}
                         />
                         <input
+                            className='update-input'
                             type="number"
                             defaultValue={item.price}
-                            // onChange={(e) => setEditPrice(e.target.value)}
                         />
                         <button className="update-button">Update</button>
                     </form>

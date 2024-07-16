@@ -2,8 +2,8 @@ import React, {useEffect, useState} from "react";
 import Layout from "../Layout/Layout";
 import ManagingPanel from "../ManagingProducts/ManagingPanel";
 import './MyProducts.css'
-import getProducts from "../../features/getProducts";
-import Product from "../Product/Product";
+import getProductsByEmail from "../../features/getProductsByEmail";
+import UpdatableProduct from "../Products/UpdatableProduct/UpdatableProduct";
 import deleteProduct from "../../features/deleteProduct";
 import updateProduct from "../../features/updateProduct";
 
@@ -22,7 +22,7 @@ export default function MyProducts() {
 
     useEffect(() => {
         async function fetchProducts() {
-            const productsData = await getProducts(userEmail);
+            const productsData = await getProductsByEmail(userEmail);
             setProducts(productsData || []);
         }
 
@@ -64,8 +64,8 @@ export default function MyProducts() {
                 <ManagingPanel/>
                 <div id='my-products-content'>
                     {products.map((product) => (
-                        <Product product={product} key={count++} deleteProduct={handleDelete}
-                                 updateProduct={handleUpdate}/>
+                        <UpdatableProduct product={product} key={count++} deleteProduct={handleDelete}
+                                          updateProduct={handleUpdate}/>
                     ))}
                 </div>
             </div>

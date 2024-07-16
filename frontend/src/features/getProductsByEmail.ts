@@ -10,9 +10,9 @@ type Product = {
     customerEmail: string,
 };
 
-async function getProducts(): Promise<Product[]> {
+async function getProductsByEmail(userEmail: string): Promise<Product[]> {
     const db = getDatabase(app);
-    const dbRef = ref(db, `products/`)
+    const dbRef = ref(db, `users/${encodeEmail(userEmail)}/`)
     const snapshot = await get(dbRef);
 
     if (snapshot.exists()) {
@@ -22,4 +22,4 @@ async function getProducts(): Promise<Product[]> {
     }
 }
 
-export default getProducts;
+export default getProductsByEmail;

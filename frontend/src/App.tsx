@@ -8,6 +8,7 @@ import AddProduct from "./components/ManagingProducts/AddProduct";
 import Home from "./components/Home/Home";
 import MyProducts from "./components/MyProducts/MyProducts";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
+import ProductDetails from "./components/ProductDetails/ProductDetails";
 
 function App() {
     let isAuthenticated: boolean = localStorage.getItem('isLogged') === 'yes';
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/" element={<Home/>}/>
                     <Route path="/login" element={<SignIn/>}/>
                     <Route path="/register" element={<SignUp/>}/>
+                    <Route path="/products/:productId" element={<ProductDetails/>}/>
 
                     {/*Accessible only for logged-in users*/}
                     <Route path='/add'

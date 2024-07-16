@@ -49,7 +49,6 @@
 .user_action img {
     width: 32px;
     height: 32px;
-    filter: brightness(0) invert(1);
 }
 
 .login {
@@ -60,7 +59,7 @@
 }
 
 .searchbar {
-    border-radius: 2px;
+    border-radius: 10px;
     background-color: white;
     justify-content: space-between;
     display: flex;
@@ -70,6 +69,7 @@
     padding: 5px 10px 5px 10px;
     height: 2em;
 }
+
 
 .searchbar input {
     background: transparent;
@@ -92,7 +92,3 @@
 .wishlist {
     padding-right: 20px;
 }
-
-/*#header, #main-window, #footer, #middle {*/
-/*    border: 2px solid black;*/
-/*}*/

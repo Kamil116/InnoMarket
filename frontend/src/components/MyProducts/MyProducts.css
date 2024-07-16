@@ -1,6 +1,7 @@
 #main-window-my-products {
     display: flex;
     height: 76vh;
+    font-family: Alef, sans-serif;
 }
 
 #my-products-content {
@@ -18,4 +19,5 @@
     /*overflow: scroll;*/
     /*max-height: 80%; !* Adjust the height as needed *!*/
     overflow-y: auto;
+    background-color: #fffafa;
 }
