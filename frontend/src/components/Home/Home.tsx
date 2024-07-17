@@ -44,7 +44,7 @@ export default function Home(): React.ReactElement {
                     </div>
                     <div className="product-list" >
                         {products.map((product) => (
-                            <Link to={`/products/${product.product_id}`}><RegularProduct product={product} key={Math.random()}/></Link>
+                            <Link style={{color: 'black'}} to={`/products/${product.product_id}`}><RegularProduct product={product} key={Math.random()}/></Link>
                         ))}
                     </div>
                 </div>

@@ -18,8 +18,11 @@ interface ErrorResponse {
     [key: string]: string;
 }
 
+interface SignInProps {
+    setAuth: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-export default function SignUp() {
+export default function SignUp({setAuth}: SignInProps) {
     const navigate = useNavigate();
 
     function handleSubmit(event: FormEvent<HTMLFormElement>): void {

@@ -2,7 +2,11 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./Header.css";
 
-export default function Header(props) {
+interface HeaderProps {
+    isLogged: string;
+}
+
+export default function Header({ isLogged }: HeaderProps) {
     let [hover, setHover] = React.useState(false);
     let [src, setSrc] = React.useState('/heart.png');
 
@@ -39,7 +43,7 @@ export default function Header(props) {
                          onMouseOver={handleMouseOver}
                          onMouseOut={handleMouseOut}/>
                 </a>
-                {props.isLogged === 'yes' ? (<Link to="/add" className='profile'>
+                {isLogged === 'yes' ? (<Link to="/add" className='profile'>
                         <img src={"/login.png"} alt="profile"/>
                     </Link>)
                     :

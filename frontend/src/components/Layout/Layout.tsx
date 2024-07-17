@@ -8,7 +8,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({children}) => {
-    let isLogged = localStorage.getItem('isLogged');
+    let isLogged: string = localStorage.getItem('isLogged') === 'yes' ? 'yes' : 'no';
 
     return (
         <>

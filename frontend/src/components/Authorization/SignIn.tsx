@@ -3,6 +3,7 @@ import "./styles/Authorization.css";
 import {Link, useNavigate} from "react-router-dom";
 import axios, {AxiosError} from "axios";
 import Layout from "../Layout/Layout";
+import {set} from "firebase/database";
 
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
@@ -12,8 +13,11 @@ const client = axios.create({
     baseURL: "http://127.0.0.1:8000",
 });
 
+interface SignInProps {
+    setAuth: React.Dispatch<React.SetStateAction<boolean>>
+}
 
-export default function SignIn() {
+export default function SignIn({ setAuth }: SignInProps) {
     const navigate = useNavigate();
 
     function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -35,6 +39,7 @@ export default function SignIn() {
             })
             .then(() => {
                 localStorage.setItem('isLogged', 'yes')
+                setAuth(true)
                 localStorage.setItem('userEmail', email)
                 navigate("/");
             })
