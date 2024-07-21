@@ -38,7 +38,9 @@ export default function Home(): React.ReactElement {
           <div className="heading">
             <p>New items</p>
             <div className="explore">
-              <button>Explore all products</button>
+              <Link to={'/products'}>
+                <button>Explore all products</button>
+              </Link>
             </div>
           </div>
           <div className="product-list">

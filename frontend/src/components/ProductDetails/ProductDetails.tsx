@@ -41,17 +41,15 @@ export default function ProductDetails() {
             <img id="main-image" src={productImage} alt="Product Image" />
           </div>
           <div className="product-detail">
-            <div className="price">${productDetails?.price}</div>
-            <div className="name">{productDetails?.product_name}</div>
-            {/*<div className="contacts">*/}
-            {/*    <button onClick="location.href='https://t.me/username'">Contact on Telegram</button>*/}
-            {/*</div>*/}
-            <div className="address">1234 Street Name, City, Country</div>
-            <div className="description">{productDetails?.description}</div>
-            <div className="wish-share">
-              <div className="wishlist">
-                <button>Add to Wishlist</button>
+            <div className="name"><h1>{productDetails?.product_name}</h1></div>
+            <div className="price">
+              <h2>${productDetails?.price}</h2></div>
+            <a href={'mailto:' + productDetails?.customerEmail} style={{ color: 'inherit' }}>
+              <div className="description">
+                <h2>Contact me: {productDetails?.customerEmail}</h2>
               </div>
+            </a>
+            <div className="wish-share">
               <div className="share">
                 <button>Share</button>
               </div>
