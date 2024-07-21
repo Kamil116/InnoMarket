@@ -165,6 +165,25 @@ body {
     }
 }
 
+.product-list {
+    gap: 20px;
+    align-items: center;
+    display: contents;
+    max-width: 80%;
+    border: 1px solid lightgray;
+    box-shadow: 3px 5px 10px lightgray;
+    border-radius: 10px;
+    max-height: 90%;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: scroll;
+    overflow: hidden;
+    background-color: #fffafa;
+}
+
 /* Product Preview */
 .product-preview {
     flex: 1;
