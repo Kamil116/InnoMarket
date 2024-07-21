@@ -3,6 +3,7 @@
     width: 300px;
     padding: 10px 10px;
     text-align: center;
+    overflow: scroll;
 }
 
 #product-image {
@@ -12,4 +13,8 @@
 #product-div:hover {
     opacity: 0.7;
     cursor: pointer;
+}
+
+.price {
+    color: palevioletred;
 }
