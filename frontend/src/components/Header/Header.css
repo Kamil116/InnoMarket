@@ -32,10 +32,12 @@
 
 @media (max-width: 480px) {
     .header {
-        padding: 1em 1em;
+        padding: 1em 5em;
         flex-direction: column;
+        height: 35vh;
     }
 }
+
 
 /* Logo */
 .logo {
