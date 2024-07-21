@@ -1,8 +1,6 @@
 import React from 'react';
 import './ManagingPanel.css';
-import { Route, useNavigate } from 'react-router-dom';
-import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
-import AddProduct from './AddProduct';
+import { useNavigate } from 'react-router-dom';
 
 export default function ManagingPanel() {
   const navigate = useNavigate();
@@ -26,10 +24,7 @@ export default function ManagingPanel() {
             </li>
             <hr className="hr" />
             <li>
-              <Route
-                path="/add"
-                element={<AddProduct />}
-              />
+              <a href="/add">Add Item</a>
             </li>
             <hr className="hr" />
             <li>
