@@ -1,22 +1,23 @@
-import React, {ReactNode} from "react";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
+import React, { ReactNode } from 'react';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 
 interface LayoutProps {
-    children: ReactNode,
-    auth?: unknown
+  children: ReactNode;
+  auth?: unknown;
 }
 
-const Layout: React.FC<LayoutProps> = ({children}) => {
-    let isLogged: string = localStorage.getItem('isLogged') === 'yes' ? 'yes' : 'no';
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const isLogged: string =
+    localStorage.getItem('isLogged') === 'yes' ? 'yes' : 'no';
 
-    return (
-        <>
-            <Header isLogged={isLogged}/>
-            <main>{children}</main>
-            <Footer/>
-        </>
-    );
+  return (
+    <>
+      <Header isLogged={isLogged} />
+      <main>{children}</main>
+      <Footer />
+    </>
+  );
 };
 
 export default Layout;
