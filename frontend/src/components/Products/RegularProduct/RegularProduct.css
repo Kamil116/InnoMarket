@@ -3,7 +3,7 @@
     width: 300px;
     padding: 10px 10px;
     text-align: center;
-    overflow-x: scroll;
+    overflow-x: auto;
 }
 
 #product-image {
