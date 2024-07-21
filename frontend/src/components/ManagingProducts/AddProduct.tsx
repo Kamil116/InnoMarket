@@ -50,7 +50,7 @@ export default function AddProduct() {
     }).catch((error) => alert(error));
 
     const imageRef = storageRef(storage, `images/${guid}`);
-    uploadBytes(imageRef, main_image);
+    uploadBytes(imageRef, main_image).then(() => alert('success'));
   }
 
   return (
