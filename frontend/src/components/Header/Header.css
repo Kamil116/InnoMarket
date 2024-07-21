@@ -1,23 +1,43 @@
+/* Reset and global styles */
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
+/* Header */
 .header {
     font-size: 1.1rem;
-    font-family: Alef, sans-serif;
+    font-family: 'Alef', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, #40ba21 0%, #00b158 100%);
-    padding-left: 18em;
-    padding-right: 18em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    height: 4vh;
+    padding: 1em 18em;
+    height: 10vh;
 }
 
+@media (max-width: 1200px) {
+    .header {
+        padding: 1em 10em;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1em 5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 1em 1em;
+        flex-direction: column;
+    }
+}
+
+/* Logo */
 .logo {
     display: flex;
     justify-content: space-between;
@@ -39,16 +59,17 @@
     margin-right: 5px;
 }
 
+/* User Actions */
 .user_action {
     display: flex;
     justify-content: space-between;
-    /* width: 5%; */
     align-items: center;
+    gap: 10px;
 }
 
 .user_action img {
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 48px;
 }
 
 .login {
@@ -58,24 +79,73 @@
     margin-left: 10px;
 }
 
+.login img {
+        width: 32px;
+        height: 32px;
+    }
+
+
+/* Searchbar */
 .searchbar {
     border-radius: 10px;
     background-color: white;
-    justify-content: space-between;
     display: flex;
     align-items: center;
     width: 45em;
-    overflow: hidden;
-    padding: 5px 10px 5px 10px;
+    padding: 5px 10px;
     height: 2em;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
+@media (max-width: 1200px) {
+    .searchbar {
+        width: 35em;
+    }
+}
+
+@media (max-width: 768px) {
+    .searchbar {
+        width: 25em;
+    }
+    .logo p {
+        display: none;
+    }
+    
+    .login img {
+        width: 32px;
+        height: 32px;
+    }
+    
+    #search-image {
+        display: none;
+    }
+
+    #search-button {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .searchbar {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .logo p {
+        display: none;
+    }
+    .login img {
+        width: 32px;
+        height: 32px;
+    }
+}
 
 .searchbar input {
     background: transparent;
     outline: none;
     border: 0;
-    width: 54em;
+    flex: 1;
 }
 
 #search-image {
@@ -89,6 +159,7 @@
     cursor: pointer;
 }
 
+/* Wishlist */
 .wishlist {
     padding-right: 20px;
 }
