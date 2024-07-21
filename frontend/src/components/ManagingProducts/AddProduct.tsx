@@ -18,7 +18,7 @@ export default function AddProduct() {
     const product_name: string = (form[0] as HTMLInputElement).value;
     const price: number = Number((form[1] as HTMLInputElement).value);
     const main_image: File = (form[2] as HTMLInputElement).files![0];
-    const description: string = (form[4] as HTMLInputElement).value;
+    const description: string = (form[3] as HTMLInputElement).value;
 
     const userEmail: string | null = localStorage.getItem('userEmail');
     let validEmail: string = '';
