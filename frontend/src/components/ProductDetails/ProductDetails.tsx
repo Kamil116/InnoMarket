@@ -46,6 +46,7 @@ export default function ProductDetails() {
               <h2>${productDetails?.price}</h2></div>
             <a href={'mailto:' + productDetails?.customerEmail} style={{ color: 'inherit' }}>
               <div className="description">
+                <h3>${productDetails?.description}</h3>
                 <h2>Contact me: {productDetails?.customerEmail}</h2>
               </div>
             </a>
