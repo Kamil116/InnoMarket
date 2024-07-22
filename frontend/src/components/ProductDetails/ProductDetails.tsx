@@ -17,14 +17,12 @@ export default function ProductDetails() {
   const [productDetails, setProductDetails] = useState<Product>();
   const [productImage, setProductImage] = useState<string>();
 
-  useEffect(() => {
-    document.title = 'Product details';
-  }, []);
 
   useEffect(() => {
     async function fetchProductDetails() {
       const productDetails: Product = await getProductDetails(productId);
       setProductDetails(productDetails);
+      document.title = productDetails!.product_name.substring(0, 15);
     }
 
     async function fetchImage() {
@@ -35,11 +33,14 @@ export default function ProductDetails() {
 
     fetchProductDetails();
     fetchImage();
+
   }, []);
 
   return (
     <>
       <Layout>
+        <meta name="Product description" content={productDetails?.description} />
+        <meta name="Product name" content={productDetails?.product_name} />
         <div className="product-container">
           <div className="product-preview">
             <img id="main-image" src={productImage} alt="Product Image" />
