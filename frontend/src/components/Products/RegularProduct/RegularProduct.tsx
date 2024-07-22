@@ -43,7 +43,7 @@ export default function RegularProduct(props: { product: Product }) {
     <div id="product-div">
       <img src={imageUrl} id="product-image" alt="product image" />
       <h2>{item.product_name}</h2>
-      <h3 className='price'>${item.price}</h3>
+      <h3 className="price">${item.price}</h3>
     </div>
   );
 }

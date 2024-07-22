@@ -41,15 +41,21 @@ export default function ProductDetails() {
             <img id="main-image" src={productImage} alt="Product Image" />
           </div>
           <div className="product-detail">
-            <div className="name"><h1>{productDetails?.product_name}</h1></div>
+            <div className="name">
+              <h1>{productDetails?.product_name}</h1>
+            </div>
             <div className="price">
-              <h2>${productDetails?.price}</h2></div>
-            <a href={'mailto:' + productDetails?.customerEmail} style={{ color: 'inherit' }}>
-              <div className="description">
-                <h3>{productDetails?.description}</h3>
+              <h2>${productDetails?.price}</h2>
+            </div>
+            <div className="description">
+              <h3>{productDetails?.description}</h3>
+              <a
+                href={'mailto:' + productDetails?.customerEmail}
+                style={{ color: 'inherit' }}
+              >
                 <h2>Contact me: {productDetails?.customerEmail}</h2>
-              </div>
-            </a>
+              </a>
+            </div>
             <div className="wish-share">
               <div className="share">
                 <button>Share</button>
