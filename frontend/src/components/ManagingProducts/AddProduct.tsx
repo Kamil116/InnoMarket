@@ -1,5 +1,5 @@
 import Layout from '../Layout/Layout';
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useEffect } from 'react';
 import './AddProduct.css';
 import ManagingPanel from './ManagingPanel';
 import { app, storage } from '../../firebaseConfig';
@@ -8,6 +8,10 @@ import { uploadBytes, ref as storageRef } from 'firebase/storage';
 import { Guid } from 'guid-typescript';
 
 export default function AddProduct() {
+  useEffect(() => {
+    document.title = 'Add product';
+  }, []);
+
   async function handleSubmit(
     event: FormEvent<HTMLFormElement>
   ): Promise<void> {

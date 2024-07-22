@@ -17,6 +17,10 @@ export default function Home(): React.ReactElement {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
+    document.title = 'Home page';
+  }, []);
+
+  useEffect(() => {
     async function fetchProducts() {
       const productsData = await getProducts();
       let slicedData;

@@ -21,6 +21,10 @@ export default function MyProducts() {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
+    document.title = 'My products';
+  }, []);
+
+  useEffect(() => {
     async function fetchProducts() {
       const productsData = await getProductsByEmail(userEmail);
       setProducts(productsData || []);

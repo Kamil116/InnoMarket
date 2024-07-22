@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useEffect } from 'react';
 import './styles/Authorization.css';
 import { Link } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
@@ -23,6 +23,10 @@ interface SignUpProps {
 
 export default function SignUp({ setAuth }: SignUpProps) {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'Registration';
+  }, []);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>): void {
     event.preventDefault();

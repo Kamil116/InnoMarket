@@ -18,6 +18,10 @@ export default function ProductDetails() {
   const [productImage, setProductImage] = useState<string>();
 
   useEffect(() => {
+    document.title = 'Product details';
+  }, []);
+
+  useEffect(() => {
     async function fetchProductDetails() {
       const productDetails: Product = await getProductDetails(productId);
       setProductDetails(productDetails);

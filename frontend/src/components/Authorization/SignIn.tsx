@@ -1,4 +1,4 @@
-import React, { FormEvent } from 'react';
+import React, { FormEvent, useEffect } from 'react';
 import './styles/Authorization.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios, { AxiosError } from 'axios';
@@ -18,6 +18,10 @@ interface SignInProps {
 
 export default function SignIn({ setAuth }: SignInProps) {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = 'Login';
+  }, []);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     interface ErrorResponse {
